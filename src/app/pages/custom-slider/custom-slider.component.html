@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-6">
+    <div class="m-auto">
+      <app-custom-slider-scroll [(inputModel)]="valueSliderScroll"
+                                [data]="dataSliderScroll"
+      ></app-custom-slider-scroll>
+      <p class="h3 text-center mt-4">Value of slider is {{valueSliderScroll.text}} {{valueSliderScroll.unit}}</p>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="m-auto">
+      <app-custom-slider-scroll [(inputModel)]="valueSliderScrollDemoTwo"
+                                [min]="5"
+                                [step]="5"
+                                [data]="dataSliderScroll"
+      ></app-custom-slider-scroll>
+      <p class="h3 text-center mt-4">Value of slider is {{valueSliderScrollDemoTwo.text}} {{valueSliderScrollDemoTwo.unit}}</p>
+    </div>
+  </div>
+</div>

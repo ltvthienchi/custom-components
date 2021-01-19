@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { CustomSliderPageComponent } from './custom-slider';
 
 const routes: Routes = [
   {
     path: '',
     children: [
       {
-        path: 'page',
-        loadChildren: () => import('./pages/pages.module').then(mod => mod.PagesModule)
+        path: 'slider',
+        component: CustomSliderPageComponent
       }
     ]
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class PagesRoutingModule { }

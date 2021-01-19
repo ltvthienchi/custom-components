@@ -1,0 +1,16 @@
+<div class="slider-scroll">
+  <div class="slider-scroll-content">
+    <div class="slider-scroll-content-wrap" [ngStyle]="{'transform': 'translateY(' + valueTranslateY + 'px)'}">
+      <div class="slider-scroll-content-item" *ngFor="let item of data">
+        {{item.text ? item.text : '~'}}
+      </div>
+    </div>
+  </div>
+  <div class="slider-scroll-unit" *ngIf="valueSlider && valueSlider.unit">
+    <p>{{valueSlider.unit}}{{valueSlider.text > 1 ? 's' : ''}}</p>
+  </div>
+  <div class="slider-scroll-control">
+    <mat-slider [min]="min" [max]="max" [value]="valueMatSlider" [step]="step"
+                (input)="onInput($event)" (valueChange)="onValueChange($event)"></mat-slider>
+  </div>
+</div>

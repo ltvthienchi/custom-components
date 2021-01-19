@@ -1,0 +1,35 @@
+.slider-scroll {
+  margin-top: 20px;
+
+  &-content {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    overflow: hidden;
+
+    &-wrap {
+      height: 40px;
+      text-align: center;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &-item {
+      font-size: 28px;
+      line-height: 2.5rem;
+    }
+  }
+
+  &-unit {
+    p {
+      text-align: center;
+      margin: 0;
+      color: #D8D8D8;
+    }
+  }
+
+  &-control {
+    mat-slider {
+      width: 100%;
+    }
+  }
+}
